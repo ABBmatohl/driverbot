@@ -11,8 +11,8 @@ const state = {
   connect: false,
   loglimit: 10,
   user: {
-    name: "joakim.flink@abbindustrigymnasium.se",
-    password: "apaapaapa",
+    name: "mattias.ohlsson@abbindustrigymnasium.se",
+    password: "password",
     port: 8883,
     adress: "maqiatto.com"
   }
