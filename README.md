@@ -1,18 +1,51 @@
-# Wifi-Styrd-bil aka Driverbot
-Vi gör en Wifistyrd bil som projekt under år 1 på spetsen.
-
-Här ligger exempelkod man kan använda för att testa sin hemsida eller sin mikrokontrol kod.
-Finns även en länk till hemsidan hostad på en AWS sida. (Denna länk har utgåt)
-
-[Länk till kodbank](https://github.com/abbindustrigymnasium/Mikrokontroller-Kodbank)
-
-
+# Driverbot styrbas
 [Länk till Styrbasen på AWS](http://robodriver.s3.amazonaws.com/index.html)
 
+## Vad ingår
+Dessa komponenter ingår i denna robotstyrbas
 
-[Länk till video genomgång av kodens uppbyggnad](https://web.microsoftstream.com/video/fd39fc55-5bb8-4e03-8e59-d27651449fb6)
+### App.vue
+I App.vue binds alla komponenter ihop men även en dialogruta finns att klicka upp för att ställa in vilken MQTT broker man ska ansluta till.
+s
+### Buttons.vue
+I Buttons.vue finns en enklare styrmöjlighet för att skicka kommandon för fram, bak, vänster och höger till mqtt.
+MQTT topicen jag döpt min till heter drive, så antingen döper du din till samma eller så byter du bara namn i koden.
+Det finns fyra knappar för att reglera hastighet.
+### Buttonsv2.vue
+I Buttonsv2.vue finns en mer avancerad styrmöjlighet för att skicka kommandon för fram, bak, vänster och höger, snett upp  och snett ner till mqtt.
+MQTT topicen jag döpt min till heter drive, så antingen döper du din till samma eller så byter du bara namn i koden.
+Det finns fyra knappar för att reglera hastighet.
 
-## SVG "Bilder" in i CSSen
-Det finns lite olika sätta att göra för att få in svg mönster och bilder i sin hemsida, vissa sidor som [HeroPatterns](https://www.heropatterns.com) och [Svgbackgrounds](https://www.svgbackgrounds.com) då man får färdig css kod som man bara kan lägga in i sin style del.
+### Logger.vue
+En Komponent som loggar vilka kommandon som skickas över MQTT, vill du själv förbättra den så kan du göra att den läser av kommandon som även mikrokontrolllen skickar.
 
-Använder man vissa andra siter så som [beautifuldingbats](https://beautifuldingbats.com/pattern-generator/ https://css-tricks.com/using-svg/) så måste man konvertera detta och för att lägga in i sin css, detta kan man göra via [detta program](https://yoksel.github.io/url-encoder/).
+### store.js
+Här sparas alla viktiga variabler som skickas mellan komponenterna.
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Run your tests
+```
+npm run test
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
