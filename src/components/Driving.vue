@@ -38,7 +38,7 @@ export default {
  },
  watch: {
      speed: function() {      //Updates the speed whenever the slider is used
-        if(this.speed>0){ this.client.publish(this.options.username + "/" + "drive", this.dir + this.speed)}
+         this.client.publish(this.options.username + "/" + "drive", this.dir + this.speed)
         //else if(this.speed<0){this.client.publish(this.options.username +"/" + "drive", 'b' + Math.abs(this.speed))}
         //  this.Send('drive','f'+this.speed)
         console.log(this.speed)
@@ -169,11 +169,12 @@ export default {
 
     display: grid;
     grid-template-columns: repeat(3, 15%);    
-    grid-template-rows: repeat(3, 35%);    
-
+    grid-template-rows: repeat(3, 35%);   
+  
 }
 .slidecontainer {
   width: 100%; /* Width of the outside container */
+
 }
 
 /* The slider itself */
@@ -187,11 +188,13 @@ export default {
   opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: .2s; /* 0.2 seconds transition on hover */
   transition: opacity .2s;
+  
 }
 
 /* Mouse-over effects */
 .slider:hover {
   opacity: 1; /* Fully shown on mouse-over */
+
 }
 
 /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
@@ -202,6 +205,8 @@ export default {
   height: 25px; /* Slider handle height */
   background: #04AA6D; /* Green background */
   cursor: pointer; /* Cursor on hover */
+  
+  
 }
 
 .slider::-moz-range-thumb {
@@ -209,6 +214,7 @@ export default {
   height: 25px; /* Slider handle height */
   background: #04AA6D; /* Green background */
   cursor: pointer; /* Cursor on hover */
+  
 }
 .btn {
   /* height: 100px;
@@ -218,49 +224,58 @@ export default {
   border-radius: 50%;
   border: 2px solid black;
   background-color:gray;
+  overflow:hidden;
   
 }
 #right{
-   background-image:url("https://cdn4.iconfinder.com/data/icons/arrows-249/24/small_chevron_arrow_right-512.png");
-     background-size: cover;
-  background-repeat: no-repeat;
+    background-image:url("https://cdn4.iconfinder.com/data/icons/arrows-249/24/small_chevron_arrow_right-512.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow:hidden;
 }
 #left{
     
     background-image:url("https://cdn4.iconfinder.com/data/icons/arrows-249/24/small_chevron_arrow_left-512.png");
     background-size: cover;
-  background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    overflow:hidden;
 }
 #pause{
     background-image:url("https://cdn4.iconfinder.com/data/icons/arrows-249/24/last_page_chevron-512.png");
     background-size: cover;
-  background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    overflow:hidden;
 } 
 #up{    
     background-image: url("https://cdn4.iconfinder.com/data/icons/arrows-249/24/small_chevron_arrow_up-512.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow:hidden;
 }
 
 #down{
-background-image: url("https://cdn4.iconfinder.com/data/icons/arrows-249/24/small_chevron_arrow_down-512.png");
-background-size:cover;
-background-repeat:no-repeat;
+    background-image: url("https://cdn4.iconfinder.com/data/icons/arrows-249/24/small_chevron_arrow_down-512.png");
+    background-size:cover;
+    background-repeat:no-repeat;
+    overflow:hidden;
 }
 #direction{
     margin-top:7.5%;
     color:white;
     font-family: 'Odibee Sans', cursive;
+    overflow:hidden;
 }
 #speed{
     margin-top:7.5%;
     color: white;
     font-family: 'Odibee Sans', cursive;
+    overflow:hidden;
 }
 #lastDirection{
     margin-top:7.5%;
     color: white;
     font-family: 'Odibee Sans', cursive;
+    overflow:hidden;
     
 }
 

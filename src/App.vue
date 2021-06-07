@@ -1,4 +1,5 @@
 <template>
+
   <div id="body">
     
     <driving> </driving>
@@ -27,7 +28,18 @@ export default {
   width:100vw;
   background-size: cover;
   background-position: center;
-  
-  
+  overflow:hidden!important;
+  position:relative;
+  overflow-x:hidden;
+  overflow-y:hidden;
+  margin:0px;
 }
+html{
+  overflow:hidden!important;
+   height:100%;
+   width:100%;
+   position:relative;
+   margin:0px;
+}
+
 </style>
